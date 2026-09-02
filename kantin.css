@@ -1,0 +1,650 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+
+/* ================= LOGIN ================= */
+
+.login-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #ff8a00, #ffcc00);
+}
+
+.login-box {
+    background: white;
+
+    padding: 40px;
+
+    width: 350px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.login-box h1 {
+    color: #ff7b00;
+    margin-bottom: 10px;
+}
+
+.login-box p {
+    margin-bottom: 25px;
+    color: gray;
+}
+
+.login-box input {
+
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+
+    border: 1px solid #ccc;
+}
+
+.login-box button {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ff7b00;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background: #e96f00;
+}
+
+
+/* ================= APP ================= */
+
+.app-page {
+    display: none;
+}
+
+
+/* HEADER */
+
+header {
+
+    background: #ff7b00;
+
+    color: white;
+
+    padding: 15px 40px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.user-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.user-info button {
+
+    padding: 8px 15px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    background: white;
+
+    color: #ff7b00;
+
+    font-weight: bold;
+}
+
+
+/* NAVBAR */
+
+nav {
+
+    background: white;
+
+    padding: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav button {
+
+    border: none;
+
+    background: #ff7b00;
+
+    color: white;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #e96f00;
+}
+
+#cartCount {
+
+    background: white;
+
+    color: #ff7b00;
+
+    padding: 2px 7px;
+
+    border-radius: 50%;
+}
+
+
+/* MAIN */
+
+main {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 30px;
+}
+
+main h2 {
+
+    margin-bottom: 25px;
+
+    color: #333;
+}
+
+
+/* MENU */
+
+.menu-container {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+}
+
+.card {
+
+    background: white;
+
+    padding: 20px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+
+    transform: translateY(-5px);
+}
+
+.food-image {
+
+    font-size: 70px;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+
+    margin-bottom: 10px;
+}
+
+.card p {
+
+    color: #ff7b00;
+
+    font-weight: bold;
+
+    margin-bottom: 15px;
+}
+
+.card button {
+
+    background: #ff7b00;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 20px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+/* KERANJANG */
+
+.cart-item {
+
+    background: white;
+
+    margin-bottom: 15px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.cart-item button {
+
+    padding: 5px 10px;
+
+    margin: 3px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #ff7b00;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+.total-box {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    text-align: right;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.total-box button {
+
+    margin-top: 15px;
+
+    background: green;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+
+/* RIWAYAT */
+
+.history-item {
+
+    background: white;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+
+/* HIDDEN */
+
+.hidden {
+    display: none;
+}
+
+
+/* RESPONSIVE */
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+
+    header {
+        padding: 15px 20px;
+    }
+
+
+    .logo {
+        font-size: 20px;
+    }
+
+
+    main {
+        padding: 20px;
+    }
+
+}
+
+
+/* HP */
+@media (max-width: 600px) {
+
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* LOGIN */
+
+    .login-box {
+
+        width: 90%;
+
+        padding: 25px;
+
+    }
+
+
+    .login-box h1 {
+
+        font-size: 24px;
+
+    }
+
+
+
+    /* HEADER */
+
+    header {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 15px;
+
+        padding: 20px 10px;
+
+    }
+
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
+
+    .user-info {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+
+    /* NAVBAR */
+
+    nav {
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 15px;
+
+    }
+
+
+    nav button {
+
+        width: 100%;
+
+        font-size: 15px;
+
+    }
+
+
+
+    /* CONTENT */
+
+    main {
+
+        width: 100%;
+
+        padding: 15px;
+
+    }
+
+
+    main h2 {
+
+        font-size: 22px;
+
+    }
+
+
+
+    /* MENU CARD */
+
+    .menu-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+    }
+
+
+    .card {
+
+        width: 100%;
+
+        padding: 15px;
+
+    }
+
+
+    .food-image img {
+
+        width: 120px;
+
+        max-width: 100%;
+
+        height: auto;
+
+    }
+
+
+
+    .card h3 {
+
+        font-size: 18px;
+
+    }
+
+
+    .card button {
+
+        width: 100%;
+
+        padding: 12px;
+
+    }
+
+
+
+    /* KERANJANG */
+
+    .cart-item {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+    }
+
+
+    .cart-item div:last-child {
+
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .cart-item button {
+
+        padding: 8px 12px;
+
+    }
+
+
+
+    .total-box {
+
+        text-align: center;
+
+    }
+
+
+    .total-box button {
+
+        width: 100%;
+
+    }
+
+
+
+    /* RIWAYAT */
+
+    .history-item {
+
+        padding: 15px;
+
+        font-size: 14px;
+
+    }
+
+
+
+}
+
+
+
+/* HP kecil 320px */
+
+@media (max-width: 350px) {
+
+
+    .login-box {
+
+        padding: 20px;
+
+    }
+
+
+    .login-box h1 {
+
+        font-size: 20px;
+
+    }
+
+
+    .card {
+
+        padding: 10px;
+
+    }
+
+
+    nav button {
+
+        font-size: 13px;
+
+        padding: 10px;
+
+    }
+
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Kantin Mhc</title>
+
+    <link rel="stylesheet" href="kantin.css">
+</head>
+
+<body>
+
+    <!-- HALAMAN LOGIN -->
+    <div id="loginPage" class="login-page">
+
+        <div class="login-box">
+            <h1>🍽️ KANTIN-MHC</h1>
+            <p>Kantin Digital Sekolah</p>
+            <input
+                type="text"
+                id="username"
+                placeholder="username"
+            >
+            <input
+                type="password"
+                id="password"
+                placeholder="password"
+            >
+
+            <button onclick="login()">
+                Login
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- APLIKASI UTAMA -->
+    <div id="appPage" class="app-page">
+
+        <!-- HEADER -->
+        <header>
+
+            <div class="logo">
+                🍽️ KANTIN MHC 
+            </div>
+
+            <div class="user-info">
+                <span id="userName"></span>
+
+                <button onclick="logout()">
+                    Logout
+                </button>
+            </div>
+
+        </header>
+
+
+        <!-- NAVIGASI -->
+        <nav>
+
+            <button onclick="showMenu()">
+                🏠 Menu
+            </button>
+
+            <button onclick="showCart()">
+                🛒 Keranjang
+                <span id="cartCount">0</span>
+            </button>
+
+            <button onclick="showHistory()">
+                📋 Riwayat
+            </button>
+
+        </nav>
+
+
+        <!-- KONTEN MENU -->
+        <main id="menuPage">
+
+            <h2>Daftar Menu</h2>
+          <center>
+            <h3>gorengan</h3><br>
+          </center>
+          
+            <div class="menu-container">
+
+                <div class="card">
+
+                    <div class="food-image"><img src="1.jpg" width="100"></div>
+
+                    <h3>bakwan</h3>
+
+                    <p>Rp 1.000</p>
+
+                    <button onclick="addToCart('bakwan', 1000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="2.jpg" width="90"></div>
+
+                    <h3>gehu</h3>
+
+                    <p>Rp 1.000</p>
+
+                    <button onclick="addToCart('gehu', 1000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="3.jpg" width="100"></div>
+
+                    <h3>cireng isi</h3>
+
+                    <p>Rp 1.000</p>
+
+                    <button onclick="addToCart('cireng isi', 1000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="4.jpg" width="100"></div>
+
+                    <h3>tempe</h3>
+
+                    <p>Rp 1.000</p>
+
+                    <button onclick="addToCart('tempe', 1000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="5.jpg" width="100"></div>
+
+                    <h3>risolt bihun</h3>
+
+                    <p>Rp 1.000</p>
+
+                    <button onclick="addToCart('karoket', 1000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="6.jpg" width="100"></div>
+
+                    <h3>lontong</h3>
+
+                    <p>Rp 1.000</p>
+
+                    <button onclick="addToCart('lontonf', 1000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+            </div>
+
+          <center>
+            <h3>makanan ringan</h3><br>
+          </center>
+
+            <div class="menu-container">
+
+                <div class="card">
+
+                    <div class="food-image"><img src="7.jpg" width="100"></div>
+
+                    <h3>chocolatos</h3>
+
+                    <p>Rp 1.000</p>
+
+                    <button onclick="addToCart('chocolatos', 1000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="8.jpg" width="100"></div>
+
+                    <h3>dilan sandwich</h3>
+
+                    <p>Rp 2.000</p>
+
+                    <button onclick="addToCart('dilan sandwich', 2000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="9.jpg" width="100"></div>
+
+                    <h3>nextar</h3>
+
+                    <p>Rp 2.000</p>
+
+                    <button onclick="addToCart('nextar', 2000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="10.jpg" width="100"></div>
+
+                    <h3>nabati</h3>
+
+                    <p>Rp 2.000</p>
+
+                    <button onclick="addToCart('nabati', 2000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="11.jpg" width="100"></div>
+
+                    <h3>makaroni</h3>
+
+                    <p>Rp 2.000</p>
+
+                    <button onclick="addToCart('makaroni', 2000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="12.jpg" width="100"></div>
+
+                    <h3>basreng</h3>
+
+                    <p>Rp 2.000</p>
+
+                    <button onclick="addToCart('basreng', 2000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+            </div>
+            <center>
+              <h3>minuman</h3><br>
+            </center>          
+
+            <div class="menu-container">
+
+                <div class="card">
+
+                    <div class="food-image"><img src="13.jpg" width="100"></div>
+
+                    <h3>milku</h3>
+
+                    <p>Rp 3.500</p>
+
+                    <button onclick="addToCart('milku', 3500)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="14.jpg" width="100"></div>
+
+                    <h3>teh pucuk</h3>
+
+                    <p>Rp 4.000</p>
+
+                    <button onclick="addToCart('teh pucuk', 4000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="15.jpg" width="100"></div>
+
+                    <h3>pocari sweat</h3>
+
+                    <p>Rp 5.000</p>
+
+                    <button onclick="addToCart('pocari sweat', 5000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="16.jpg" width="100"></div>
+
+                    <h3>nipis madu</h3>
+
+                    <p>Rp 5.000</p>
+
+                    <button onclick="addToCart('nipis madu', 5000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="17.jpg" width="100"></div>
+
+                    <h3>mizone</h3>
+
+                    <p>Rp 5.000</p>
+
+                    <button onclick="addToCart('mizone', 5000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="food-image"><img src="18.jpg" width="100"></div>
+
+                    <h3>nobo</h3>
+
+                    <p>Rp 4.000</p>
+
+                    <button onclick="addToCart('nobo', 4000)">
+                        Tambah
+                    </button>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- HALAMAN KERANJANG -->
+        <main id="cartPage" class="hidden">
+
+            <h2>🛒 Keranjang Pesanan</h2>
+
+            <div id="cartItems"></div>
+
+            <div class="total-box">
+
+                <h3>
+                    Total:
+                    <span id="totalPrice">Rp 0</span>
+                </h3>
+
+                <button onclick="checkout()">
+                    Checkout Pesanan
+                </button>
+
+            </div>
+
+        </main>
+
+
+        <!-- HALAMAN RIWAYAT -->
+        <main id="historyPage" class="hidden">
+
+            <h2>📋 Riwayat Pesanan</h2>
+          
+            <div id="historyList"></div>
+
+        </main>
+
+
+    </div>
+
+
+    <script src="kantin.js"></script>
+
+</body>
+</html>
